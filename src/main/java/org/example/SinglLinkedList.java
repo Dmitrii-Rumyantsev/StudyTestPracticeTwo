@@ -33,6 +33,9 @@ public class SinglLinkedList {
 
     // 2. Удаление элемента по значению
     public void remove(int data) {
+        if (head == null) {
+            return;
+        }
         // Ошибка: не обрабатывается случай, когда список пуст
         if (head.data == data) {
             head = head.next;

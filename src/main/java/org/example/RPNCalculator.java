@@ -48,6 +48,10 @@ public class RPNCalculator {
     public static double evaluateRPN(String expression) throws Exception {
         String[] tokens = expression.split(" ");
 
+        if (tokens.length != 3) {
+            throw new IllegalArgumentException("Введена неправильная строка");
+        }
+
         for (String token : tokens) {
             switch (token) {
                 case "+":
